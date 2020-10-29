@@ -74,25 +74,6 @@
                 border-radius: 5px;
                 margin-bottom: 35px;
             }
-            .row {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                margin: 3% 5% 0 5%;
-            }
-            .ts {
-                display: flex;
-                flex-direction: column;
-            }
-            .dt-image {
-                background-color: rgba(114, 27, 255, 0.4);
-            }
-            .dt-button {
-                background-color: rgb(114, 27, 255);
-                color: #FEB91C;
-                text-align: center;
-                padding: 3% 0 3% 0;
-            }
         </style>
     </head>
     <body>
@@ -129,20 +110,5 @@
             @endif
         </nav>
 
-        <div class="row">
-            <div class="col ts">
-                <img src="/storage/day-trader.png" class="dt-image" alt="Day Trader Strategy Forum" width="291" height="374">
-                <a href="#" class="dt-button">Day Trading</a>
-            </div>
-            <div class="col ts">
-                <img src="/storage/position-trader.png" class="dt-image" alt="Position Trader Strategy Forum" width="310" height="374">
-                <a href="#" class="dt-button">Position Trading</a>
-            </div>
-            <div class="col ts">
-                <img src="/storage/swing-trader.png" class="dt-image" alt="Swing Trader Strategy Forum" width="340" height="374">
-                <a href="#" class="dt-button">Swing Trading</a>
-            </div>
-        </div>
-
-    </body>
+        </body>
 </html>

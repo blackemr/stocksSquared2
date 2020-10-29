@@ -24,4 +24,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin-profile', 'AdminController@index')->name('admin-profile');
 Route::get('/moderator', 'ModeratorController@index')->name('moderator');
+Route::get('/strat-submission', 'StrategyController@index')->name('strategy');
 
