@@ -1,11 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@400;
 
-/*!
- * Bootstrap v4.5.2 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+600&display=swap);@charset "UTF-8";
 
 :root {
   --blue: #3490dc;
@@ -10897,5 +10892,160 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+html {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Homepage Styles */
+
+a {
+  color: #FEB91C;
+  padding: 0 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+}
+
+.stock-slider {
+  background-color: #2D2D2D;
+  display: flex;
+  flex-direction: row;
+}
+
+.market-indices {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: 85%;
+}
+
+.positive {
+  color: #00BC40;
+}
+
+.negative {
+  color: #F60000;
+}
+
+#sp500-price {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+#dow30-price {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+#nasdaq-price {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+#russell2000-price {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+#sp500-pc {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+#dow30-pc {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+#nasdaq-pc {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+#russell2000-pc {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.sp500 {
+  margin-left: 9%;
+}
+
+.dow30 {
+  margin-left: 9%;
+}
+
+.nasdaq {
+  margin-left: 9%;
+}
+
+.russell2000 {
+  margin-left: 9%;
+}
+
+.position-ref {
+  position: relative;
+}
+
+.top-right {
+  position: absolute;
+  right: 5%;
+  top: 18px;
+  background-color: #721BFF;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.logo {
+  margin: 1% 0 0 5%;
+}
+
+#searchbar {
+  position: absolute;
+  right: 10px;
+  border-radius: 5px;
+  margin-bottom: 35px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3% 5% 0 5%;
+}
+
+.ts {
+  display: flex;
+  flex-direction: column;
+}
+
+.dt-image {
+  background-color: rgba(114, 27, 255, 0.4);
+}
+
+.dt-button {
+  background-color: #721bff;
+  color: #FEB91C;
+  text-align: center;
+  padding: 3% 0 3% 0;
 }
 

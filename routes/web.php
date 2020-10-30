@@ -21,8 +21,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin-profile', 'AdminController@index')->name('admin-profile');
-Route::get('/moderator', 'ModeratorController@index')->name('moderator');
-Route::get('/strat-submission', 'StrategyController@index')->name('strategy');
+Route::get('/strategy/create', 'StrategyController@create');
+Route::post('/strategy', 'StrategyController@store');
+
+Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
+
 

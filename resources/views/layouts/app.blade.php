@@ -18,13 +18,28 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        .dt-button {
+            width: 65% !important;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
+        <div class="stock-slider">
+            <img src="/storage/nasa.png"/>
+            <!-- Stocks can have a class added called positive or negative that changes the color of the text -->
+            <div class="market-indices">
+                <span class="sp500 positive">S&amp;P 500 <span id="sp500-price">3,149.15</span> <span id="sp500-pc">+0.23%</span></span>
+                <span class="dow30 negative">DOW 30 <span id="dow30-price">28,419.15</span> <span id="dow30-pc">-1.23%</span></span>
+                <span class="nasdaq positive">NASDAQ <span id="nasdaq-price">11,419.15</span> <span id="nasdaq-pc">+0.53%</span></span>
+                <span class="russell2000 positive">RUSSELL 2000 <span id="russell2000-price">8,419.15</span> <span id="russell2000-pc">-0.23%</span></span>
+            </div> 
+        </div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img src="/storage/stocks-squared.png" class="logo" alt="Stocks Squared"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -51,7 +66,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->username }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

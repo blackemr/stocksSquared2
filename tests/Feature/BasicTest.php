@@ -13,7 +13,7 @@ class BasicTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function test_homepage_connection()
     {
         $response = $this->get('/');
 
