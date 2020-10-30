@@ -116,7 +116,7 @@
         <div class="page-body">
             <div class="user-info">
                 <div> Viewing account ID: 5702457239 </div>
-                <img src="/storage/someman.png" style="width:65%;margin-top:1%;"/>
+                <img src="/storage/someman.png" style="width:40%;margin-top:1%;"/>
                 <div class="user-details">
                     <h2>John Doe</h2>
                     <p>Declared Trading Group:
