@@ -13,7 +13,6 @@ class StrategyController extends Controller
         $data = request()->validate([
             'strategy_title' => 'required',
             'image' => ['required', 'image'],
-            'user_id' => auth()->id
         ]);
         
         auth()->user()->strategies()->create($data);
