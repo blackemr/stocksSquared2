@@ -1,11 +1,16 @@
 <?php
-
+// Namespaces
 namespace App;
 
+// Imports
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+/**
+ * This model is authenticatable which means that
+ * a verification route can be established.
+ */
 class User extends Authenticatable
 {
     use Notifiable;
@@ -13,7 +18,7 @@ class User extends Authenticatable
     /**
      * The attributes that are mass assignable.
      *
-     * @var array
+     * @var array [name, email, username, password]
      */
     protected $fillable = [
         'name', 'email', 'username', 'password',
@@ -22,7 +27,7 @@ class User extends Authenticatable
     /**
      * The attributes that should be hidden for arrays.
      *
-     * @var array
+     * @var array [password, remember_token]
      */
     protected $hidden = [
         'password', 'remember_token',
@@ -37,11 +42,21 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * This function allows the program to create
+     * a one to many relationship for users and
+     * strategies.
+     */
     public function strategies() {
         // Create a one to many relationship
         return $this->hasMany(Strategy::class);
     }
 
+    /**
+     * This function allows the program to create
+     * a one to many relationship for users and
+     * profiles.
+     */
     public function profile() {
         // Create a one to one relationship
         return $this->hasOne(Profile::class);

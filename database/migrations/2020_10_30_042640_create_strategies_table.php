@@ -14,7 +14,7 @@ class CreateStrategiesTable extends Migration
     public function up()
     {
         Schema::create('strategies', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             // Associate with a user
             $table->unsignedBigInteger('user_id');
             $table->string('strategy_title');
