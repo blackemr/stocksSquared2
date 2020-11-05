@@ -49,7 +49,7 @@ class User extends Authenticatable
      */
     public function strategies() {
         // Create a one to many relationship
-        return $this->hasMany(Strategy::class);
+        return $this->hasMany(Strategy::class)->orderBy('created_at', 'DESC');
     }
 
     /**

@@ -18,7 +18,8 @@ class CreateStrategiesTable extends Migration
             // Associate with a user
             $table->unsignedBigInteger('user_id');
             $table->string('strategy_title');
-            $table->string('image');
+            $table->string('strategy_type');
+            $table->text('strategy_content');
             $table->timestamps();
             // For searching
             $table->index('user_id');

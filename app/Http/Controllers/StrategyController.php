@@ -39,18 +39,15 @@ class StrategyController extends Controller
     public function store() {
         // Validation for the request coming from the form.
         $data = request()->validate([
-            'strategy_title' => 'required',
-            'image' => ['required', 'image'],
+            'strategy-title' => 'required',
+            'strategy-type' => 'required',
+            'strategy-info' => 'required',
         ]);
-        // File storage
-        $file = request()->file('image');
-        $extension = $file->getClientOriginalExtension();
-        $fileName = time().'.'.$extension;
-        Storage::disk('public')->put('filename', $fileName);
         // Associate the user to the strategy.
         auth()->user()->strategies()->create([
-            'strategy_title' => $data['strategy_title'],
-            'image' => $upload,
+            'strategy_title' => $data['strategy-title'],
+            'strategy_type' => $data['strategy-type'],
+            'strategy_content' => $data['strategy-info'],
         ]);
         // Redirect the user to their profile.
         return redirect('/profile/' . auth()->user()->id);
