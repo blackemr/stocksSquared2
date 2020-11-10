@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 // Imports
 use App\Strategy;
+use App\User;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -32,7 +33,6 @@ class StrategyController extends Controller
     }
 
     /**
-     * @ToDo
      * This function allows the user to store an individual
      * strategy.
      */
@@ -52,4 +52,5 @@ class StrategyController extends Controller
         // Redirect the user to their profile.
         return redirect('/profile/' . auth()->user()->id);
     }
+
 }

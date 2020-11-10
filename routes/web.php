@@ -22,6 +22,7 @@ Auth::routes();
 
 Route::get('/strategy/create', 'StrategyController@create');
 Route::post('/strategy', 'StrategyController@store');
+Route::get('/search', 'SearchController@index')->name('search');
 
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
 

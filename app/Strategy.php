@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Strategy extends Model
 {
+    protected $table = 'strategies';
+    protected $primaryKey ='user_id';
     // Allows the strategy to upload without errors
     protected $guarded = [];
     // Associates a user to any specific strategy.
