@@ -42,6 +42,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function is_admin() {
+        if ($this->admin) {
+            return true;
+        }
+        return false;
+    }
+
     /**
      * This function allows the program to create
      * a one to many relationship for users and
