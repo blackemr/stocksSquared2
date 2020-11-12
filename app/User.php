@@ -30,7 +30,7 @@ class User extends Authenticatable
      * @var array [password, remember_token]
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'id',
     ];
 
     /**
@@ -47,6 +47,10 @@ class User extends Authenticatable
             return true;
         }
         return false;
+    }
+
+    public function get_id() {
+        return $this->user_id;
     }
 
     /**

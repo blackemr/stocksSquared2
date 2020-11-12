@@ -31,12 +31,10 @@ Route::post('/login/custom', [
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/', function() {
         return view('pages.welcome');
-    })->name('/');
+    })->name('home');
     Route::get('/dashboard', function() {
         return view('pages.moderator');
     })->name('dashboard');
 });
 
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
-
-
