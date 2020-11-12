@@ -31,7 +31,7 @@ Route::post('/login/custom', [
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/', function() {
         return view('pages.welcome');
-    })->name('home');
+    })->name('/');
     Route::get('/dashboard', function() {
         return view('pages.moderator');
     })->name('dashboard');
