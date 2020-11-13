@@ -19,9 +19,9 @@ class LoginController extends Controller
             $user = User::where('email', $request->email)->first();
             if ($user->is_admin()) {
                 $strategies = DB::table('strategies')->get();
-                return redirect()->route('dashboard', ['strategies' => $strategies]);
+                return redirect()->route('dashboard', compact($strategies));
             }
-            return redirect()->route('home');
+            return redirect('/');
         }
         return redirect()->back();
     }

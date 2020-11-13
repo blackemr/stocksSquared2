@@ -29,11 +29,9 @@ Route::post('/login/custom', [
 ]);
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/', function() {
-        return view('pages.welcome');
-    })->name('home');
     Route::get('/dashboard', function() {
-        return view('pages.moderator');
+        $strategies = DB::table('strategies')->get();
+        return view('pages.moderator', ['strategies' => $strategies]);
     })->name('dashboard');
 });
 

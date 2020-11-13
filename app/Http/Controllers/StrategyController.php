@@ -53,4 +53,8 @@ class StrategyController extends Controller
         return redirect('/profile/' . auth()->user()->id);
     }
 
+    public function list($strategies) {
+        echo $strategies;
+    }
+
 }

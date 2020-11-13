@@ -3,9 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Moderator {{ __('Dashboard') }}</div>
+                <div class="card-header">Admin {{ __('Dashboard') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -23,14 +23,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                                @foreach ($strategies as $strategy)
-                                    <tr>
-                                        <th scope="row">{{ $strategy->strategy_title }}</th>
-                                        <td>{{ $strategy->strategy_type }}</td>
-                                        <td>{{ $strategy->strategy_content }}</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                @endforeach
+                            @foreach($strategies as $strategy)
+                            <tr>
+                                <td>{{ $strategy->strategy_title }}</td>
+                                <td>{{ $strategy->strategy_type }}</td>
+                                <td>{{ $strategy->strategy_content }}</td>
+                                <td><a href="#" class="btn btn-danger">Delete</a></td>
+                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
