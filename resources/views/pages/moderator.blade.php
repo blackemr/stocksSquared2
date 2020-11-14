@@ -28,7 +28,7 @@
                                 <td>{{ $strategy->strategy_title }}</td>
                                 <td>{{ $strategy->strategy_type }}</td>
                                 <td>{{ $strategy->strategy_content }}</td>
-                                <td><a href="#" class="btn btn-danger">Delete</a></td>
+                                <td><a href="delete/{{ $strategy->id }}" class="btn btn-danger">Delete</a></td>
                             </tr>
                             @endforeach
                         </tbody>

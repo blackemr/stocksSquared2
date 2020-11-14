@@ -27,6 +27,7 @@ Route::post('/login/custom', [
     'uses' => 'LoginController@login',
     'as' => 'login.custom'
 ]);
+Route::get('delete/{id}','StratDeleteController@destroy');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/dashboard', function() {
