@@ -77,6 +77,15 @@
                                         View Profile
                                     </a>
 
+                                    <?php
+                                        $admin = Auth::user()->is_admin;
+                                        if ($admin == 1) {
+                                    ?>
+                                    <a class="dropdown-item" href="{{ url('/dashboard') }}">
+                                        Admin Dashboard
+                                    </a>
+                                    <?php } ?>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
