@@ -30,3 +30,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+mix.scripts([
+    'public/js/all.js',
+    'public/js/dashboard.js'
+], 'public/js/all.js');
