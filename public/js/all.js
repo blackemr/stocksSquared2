@@ -26,8 +26,8 @@ function displayRadioValue() {
 }
 
 function hideDayTrades() {
-    var hTags = document.getElementsByTagName("h1");
-    var searchText = "Day Strategy";
+    var hTags = document.getElementsByTagName("h2");
+    var searchText = "Day";
     var found;
 
     for (var i = 0; i < hTags.length; i++) {
@@ -40,8 +40,8 @@ function hideDayTrades() {
 }
 
 function showDayTrades() {
-    var hTags = document.getElementsByTagName("h1");
-    var searchText = "Day Strategy";
+    var hTags = document.getElementsByTagName("h2");
+    var searchText = "Day";
     var found;
 
     for (var i = 0; i < hTags.length; i++) {
@@ -54,8 +54,8 @@ function showDayTrades() {
 }
 
 function hidePositionTrades() {
-    var hTags = document.getElementsByTagName("h1");
-    var searchText = "Position Strategy";
+    var hTags = document.getElementsByTagName("h2");
+    var searchText = "Position";
     var found;
 
     for (var i = 0; i < hTags.length; i++) {
@@ -68,8 +68,8 @@ function hidePositionTrades() {
 }
 
 function showPositionTrades() {
-    var hTags = document.getElementsByTagName("h1");
-    var searchText = "Position Strategy";
+    var hTags = document.getElementsByTagName("h2");
+    var searchText = "Position";
     var found;
 
     for (var i = 0; i < hTags.length; i++) {
@@ -82,8 +82,8 @@ function showPositionTrades() {
 }
 
 function hideSwingTrades() {
-    var hTags = document.getElementsByTagName("h1");
-    var searchText = "Swing Strategy";
+    var hTags = document.getElementsByTagName("h2");
+    var searchText = "Swing";
     var found;
 
     for (var i = 0; i < hTags.length; i++) {
@@ -96,8 +96,8 @@ function hideSwingTrades() {
 }
 
 function showSwingTrades() {
-    var hTags = document.getElementsByTagName("h1");
-    var searchText = "Swing Strategy";
+    var hTags = document.getElementsByTagName("h2");
+    var searchText = "Swing";
     var found;
 
     for (var i = 0; i < hTags.length; i++) {

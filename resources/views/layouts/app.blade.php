@@ -83,11 +83,20 @@
                                     </a>
 
                                     <?php
-                                        $admin = Auth::user()->is_admin;
+                                        $admin = Auth::user()->is_admin();
                                         if ($admin == 1) {
                                     ?>
                                     <a class="dropdown-item" href="{{ url('/dashboard') }}">
                                         Admin Dashboard
+                                    </a>
+                                    <?php } ?>
+
+                                    <?php
+                                        $moderator = Auth::user()->is_moderator();
+                                        if ($moderator == 1) {
+                                    ?>
+                                    <a class="dropdown-item" href="{{ url('/moderator-dashboard') }}">
+                                        Moderator Dashboard
                                     </a>
                                     <?php } ?>
 

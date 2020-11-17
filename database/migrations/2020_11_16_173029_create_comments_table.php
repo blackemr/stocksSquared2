@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStrategiesTable extends Migration
+class CreateCommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,18 @@ class CreateStrategiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('strategies', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            // Associate with a user
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')
+            $table->unsignedBigInteger('on_strategy');
+            $table->unsignedBigInteger('from_user_id');
+            $table->foreign('on_strategy')
+                ->references('id')->on('strategies')
+                ->onDelete('cascade');
+            $table->foreign('from_user_id')
                 ->references('id')->on('users')
                 ->onDelete('cascade');
-            $table->string('strategy_title');
-            $table->string('strategy_type');
-            $table->text('strategy_content');
+            $table->text('comment');
             $table->timestamps();
-            // For searching
-            $table->index('user_id');
         });
     }
 
@@ -36,6 +35,6 @@ class CreateStrategiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('strategies');
+        Schema::dropIfExists('comments');
     }
 }

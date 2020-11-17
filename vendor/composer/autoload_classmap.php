@@ -21,6 +21,7 @@ return array(
     'App\\Http\\Controllers\\ModeratorController' => $baseDir . '/app/Http/Controllers/ModeratorController.php',
     'App\\Http\\Controllers\\ProfilesController' => $baseDir . '/app/Http/Controllers/ProfilesController.php',
     'App\\Http\\Controllers\\SearchController' => $baseDir . '/app/Http/Controllers/SearchController.php',
+    'App\\Http\\Controllers\\StratDeleteController' => $baseDir . '/app/Http/Controllers/StratDeleteController.php',
     'App\\Http\\Controllers\\StrategyController' => $baseDir . '/app/Http/Controllers/StrategyController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',

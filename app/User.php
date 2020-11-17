@@ -49,6 +49,13 @@ class User extends Authenticatable
         return false;
     }
 
+    public function is_moderator() {
+        if ($this->moderator) {
+            return true;
+        }
+        return false;
+    }
+
     public function get_id() {
         return $this->user_id;
     }
@@ -60,7 +67,17 @@ class User extends Authenticatable
      */
     public function strategies() {
         // Create a one to many relationship
-        return $this->hasMany(Strategy::class)->orderBy('created_at', 'DESC');
+        return $this->hasMany(Strategy::class, 'user_id')->orderBy('created_at', 'DESC');
+    }
+
+    /**
+     * This function allows the program to create
+     * a one to many relationship for users and
+     * strategies.
+     */
+    public function comments() {
+        // Create a one to many relationship
+        return $this->hasMany(Comment::class, 'from_user_id')->orderBy('created_at', 'DESC');
     }
 
     /**

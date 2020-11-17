@@ -23,6 +23,6 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('pages/admin-profile');
+        return view('pages/admin');
     }
 }

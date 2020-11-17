@@ -34,6 +34,12 @@
                     <div class="card-body">
                         <h2>{{ $strategy->strategy_type }}</h2>
                         <span>{{ $strategy->strategy_content }}</span>
+                        <div class="text-center mt-2"><a href="/comment/create" class="btn btn-success">Add New Comment</a></div><br/>
+                        <ul class="list-group">
+                        @foreach($user->comments as $comment)
+                            <li class="list-group-item"><?php echo $comment->comment; ?></li>
+                        @endforeach
+                        </ul>
                     </div>
                 </div>
             </div>

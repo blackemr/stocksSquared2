@@ -551,6 +551,7 @@ class ComposerStaticInit5137e8e5751b4ea83313da6cb916cee0
         'App\\Http\\Controllers\\ModeratorController' => __DIR__ . '/../..' . '/app/Http/Controllers/ModeratorController.php',
         'App\\Http\\Controllers\\ProfilesController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfilesController.php',
         'App\\Http\\Controllers\\SearchController' => __DIR__ . '/../..' . '/app/Http/Controllers/SearchController.php',
+        'App\\Http\\Controllers\\StratDeleteController' => __DIR__ . '/../..' . '/app/Http/Controllers/StratDeleteController.php',
         'App\\Http\\Controllers\\StrategyController' => __DIR__ . '/../..' . '/app/Http/Controllers/StrategyController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',

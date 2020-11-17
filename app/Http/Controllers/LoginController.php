@@ -20,6 +20,9 @@ class LoginController extends Controller
             if ($user->is_admin()) {
                 $strategies = DB::table('strategies')->get();
                 return redirect()->route('dashboard', compact($strategies));
+            } else if ($user->is_moderator()) {
+                $comments = DB::table('comments')->get();
+                return redirect()->route('moderator-dashboard', compact($comments));
             }
             return redirect('/');
         }
