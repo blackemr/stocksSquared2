@@ -11,7 +11,7 @@ class CommentDeleteController extends Controller
         return view('admin',['comment'=>$comment]);
     }
     public function destroy($id) {
-        DB::delete('delete from comments where comment_id = ?',[$id]);
+        DB::delete('delete from comments where id = ?',[$id]);
         echo "Record deleted successfully.<br/>";
         echo '<a href = "/moderator-dashboard">Click Here</a> to go back.';
     }

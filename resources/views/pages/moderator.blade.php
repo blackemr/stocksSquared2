@@ -24,7 +24,7 @@
                             @foreach($comments as $comment)
                             <tr>
                                 <td>{{ $comment->comment }}</td>
-                                <td><a href="delete/strategy/{{ $comment->comment_id }}" class="btn btn-danger">Delete</a></td>
+                                <td><a href="delete/strategy/{{ $comment->id }}" class="btn btn-danger">Delete</a></td>
                             </tr>
                             @endforeach
                         </tbody>

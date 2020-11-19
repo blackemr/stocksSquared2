@@ -30,7 +30,7 @@ Route::post('/login/custom', [
     'as' => 'login.custom'
 ]);
 Route::get('delete/{id}','StratDeleteController@destroy');
-Route::get('delete/strategy/{comment_id}','CommentDeleteController@destroy');
+Route::get('delete/strategy/{id}','CommentDeleteController@destroy');
 
 
 Route::group(['middleware' => 'auth'], function() {
