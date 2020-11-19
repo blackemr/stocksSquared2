@@ -25,6 +25,7 @@
             Submit
         </button>
     </div>
+    <div class="text-center mt-2"><a href="/comment/create" class="btn btn-success">Add New Comment</a></div>
 
     <div class="row justify-content-center">
         @foreach($user->strategies as $strategy)
@@ -34,10 +35,12 @@
                     <div class="card-body">
                         <h2>{{ $strategy->strategy_type }}</h2>
                         <span>{{ $strategy->strategy_content }}</span>
-                        <div class="text-center mt-2"><a href="/comment/create" class="btn btn-success">Add New Comment</a></div><br/>
+                        <br/>
                         <ul class="list-group">
                         @foreach($user->comments as $comment)
-                            <li class="list-group-item"><?php echo $comment->comment; ?></li>
+                            @if($comment->on_strategy == $strategy->id)
+                                <li class="list-group-item"><?php echo $comment->comment; ?></li>
+                            @endif
                         @endforeach
                         </ul>
                     </div>

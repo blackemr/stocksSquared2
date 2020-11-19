@@ -25,7 +25,7 @@ class CreateStrategiesTable extends Migration
             $table->text('strategy_content');
             $table->timestamps();
             // For searching
-            $table->index('user_id');
+            $table->index('id');
         });
     }
 

@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 // Imports
 use App\Strategy;
 use App\User;
+use DB;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -29,7 +30,8 @@ class CommentController extends Controller
      * folder.
      */
     public function create() {
-        return view('comment.create');
+        $strategies = DB::select('select strategy_title, id from strategies');
+        return view('comment.create', ['strategies' => $strategies]);
     }
 
     /**
@@ -40,11 +42,12 @@ class CommentController extends Controller
         // Validation for the request coming from the form.
         $data = request()->validate([
             'comment' => 'required',
+            'on_strategy' => 'required',
         ]);
         // Associate the user to the comments.
         auth()->user()->comments()->create([
-            'on_strategy' => 2,
             'comment' => $data['comment'],
+            'on_strategy' => $data['on_strategy'],
         ]);
         // Redirect the user to their profile.
         return redirect('/profile/' . auth()->user()->id);

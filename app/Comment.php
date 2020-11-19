@@ -16,10 +16,10 @@ class Comment extends Model
     // Allows the strategy to upload without errors
     protected $guarded = [];
     public function user() {
-        return $this->belongsTo(User::class, 'from_user_id');
+        return $this->belongsTo(User::class);
     }
     // Associates a user to any specific strategy.
     public function strategy() {
-        return $this->belongsTo(Strategy::class, 'on_strategy');
+        return $this->belongsTo(Strategy::class);
     }
 }

@@ -13,6 +13,15 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="strategyAssociationControl">Associate to a Strategy</label>
+                    <select class="form-control" name="on_strategy" id="strategyAssociationControl">
+                        @foreach($strategies as $strategy)
+                            <option value="<?php echo $strategy->id ?>"><?php echo $strategy->strategy_title; ?></option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div class="form-group">
                     <label for="comment">Comment</label>
                     <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
                 </div>
