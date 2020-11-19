@@ -1,20 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ts">
-        <img src="/storage/day-trader.png" class="dt-image" alt="Day Trader Strategy Forum" width="291" height="374">
-        <a href="#" class="dt-button">Day Trading</a>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Stocks Squared</h1>
+            <p class="lead">This web application will allow retail traders to discuss strategies in a forum structure. Our system will allow users to create accounts and login. Users will recieve stock market data without logging into the site.
+
+                Once a user logs in, they can submit trading strategies that have to be approved by a moderator on our site.
+
+                The users have the ability to search, filter, and sort trading strategies.
+
+                Our site will contain a discussion board which will be attached to the individual strategies.
+            </p>
+        </div>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ts">
-        <img src="/storage/position-trader.png" class="dt-image" alt="Position Trader Strategy Forum" width="291"
-            height="374">
-        <a href="#" class="dt-button">Position Trading</a>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ts">
-        <img src="/storage/swing-trader.png" class="dt-image" alt="Swing Trader Strategy Forum" width="291"
-            height="374">
-        <a href="#" class="dt-button">Swing Trading</a>
-    </div>
-</div>
 @endsection
