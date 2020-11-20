@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         @if (count($strategies) > 0)
             @foreach ($strategies as $strategy)
-            <div class="col-4 mt-2">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mt-2">
                 <div class="card">
                     <div class="card-header"><h1>{{ $strategy->strategy_title }}</h1></div>
                     <div class="card-body">
